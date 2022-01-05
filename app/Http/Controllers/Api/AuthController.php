@@ -75,7 +75,9 @@ class AuthController extends Controller
         ], 200);
     }
 
-    public function index() {
-        echo "Hello World";
+    public function index(Request $request){
+        return response()->json([
+            "user" => $request->user()
+        ], 200);
     }
 }
